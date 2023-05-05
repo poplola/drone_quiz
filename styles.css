@@ -41,16 +41,6 @@ h1 {
 h2 {
     font-size: 1.5rem;
 }
-h3 {
-    font-size: 1.25rem;
-}
-h4 {
-    font-size: 0.875rem;
-}
-p {
-    margin-bottom: 1.25rem;
-    color: var(--clr-grey-5);
-}
 
 .option {
     /* display: inline-block; */
@@ -69,7 +59,7 @@ border-color: #333;
 }
 
 li {
-    padding: 5px 5px 5px 40px;
+    padding: 5px 5px 5px 20px;
     font-size: 1.2rem;
     display: flex;
     align-items: top;
@@ -82,22 +72,38 @@ li {
     /* border: 2px solid #fef2cf; */
 }
 
+span {
+    /* display: absolute; */
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
 .icon {
     content: " ";
-    display: absolute;
-    margin-right: 10px;
+    /* display: absolute; */
+    /* margin-right: 10px; */
 }
 
 .correct-icon::before {
     content: "✅";
-    display: absolute;
-    left: 0
+
+    /* display: absolute; */
+
 }
 
 .incorrect-icon::before {
     content: "❌";
-    display: absolute;
-    left: 0
+    /* display: absolute; */
+   
 }
 
 
+.incorrect-text {
+    color: tomato;
+}
+
+.correct-text {
+    color: forestgreen;
+    font-weight: 700;
+}

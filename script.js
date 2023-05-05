@@ -2522,7 +2522,7 @@ drone_quizs.forEach(item => {
         <li>
             <span class="icon"></span>
             <input type="radio" name="option" class="option" value="${item.id}A"> 
-            <div>${item.question.optionsA}</div>
+            ${item.question.optionsA}
         </li>
 
         <li>
@@ -2546,7 +2546,6 @@ const inputElements = document.getElementsByTagName("input");
 // console.log(inputElements);
 
 for (var i = 0; i < inputElements.length; i++) {
-    // console.log(inputElements[i])
     inputElements[i].addEventListener("click", function() {
       // Do something when the input value changes
       console.log("Input value clicked to: " + this.value);
@@ -2561,17 +2560,28 @@ for (var i = 0; i < inputElements.length; i++) {
     drone_quizs.forEach(item => {
         // console.log(item)
         if (item.id === questionNo) {
-            console.log("==this== : ", this)
-            console.log("== this.sibling ==: ", this.previousSibling)
+            console.log("==this== : ", this.parentElement)
+            // const parentElements =  this.parentElement.parentElement;
+            // const childElements = parentElements.querySelectorAll("span")
+            // childElements.forEach(element => {
+            //     console.log("??? element ???: ", element)
+            //     element.classList.toggle("icon")
+            // })
+
+            // this.parentElement.parentElement.children.forEach(li_item => {
+            //     console.log("item", li_item)
+            // })
+            // console.log("== this.sibling ==: ", this.previousSibling)
             if (myAnswer === item.answer) {
                 console.log('Correct!')
-
-                this.previousSibling.previousElementSibling.classList.add("correct-icon")
+                this.previousSibling.previousElementSibling.classList.toggle("correct-icon")
+                this.parentElement.classList.toggle("correct-text")
             }
             else {
                 console.log("Incorect!")
 
-                this.previousSibling.previousElementSibling.classList.add("incorrect-icon")
+                this.previousSibling.previousElementSibling.classList.toggle("incorrect-icon")
+                this.parentElement.classList.toggle("incorrect-text")
             }
         }
     })
