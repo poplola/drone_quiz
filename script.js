@@ -2522,19 +2522,19 @@ drone_quizs.forEach(item => {
         <li>
             <span class="icon"></span>
             <input type="radio" name="option" class="option" value="${item.id}A"> 
-            ${item.question.optionsA}
+            <div>${item.question.optionsA}</div>
         </li>
 
         <li>
             <span class="icon"></span>
             <input type="radio" name="option" class="option" value="${item.id}B"> 
-            ${item.question.optionsB}
+            <div>${item.question.optionsB}</div>
         </li>
     
         <li>
             <span class="icon"></span>
             <input type="radio" name="option" class="option" value="${item.id}C"> 
-            ${item.question.optionsC}
+            <div>${item.question.optionsC}</div>
         </li>
     </ul>
   </div>
